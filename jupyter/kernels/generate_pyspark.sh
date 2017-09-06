@@ -34,7 +34,7 @@ cat << EOF
     "SPARK_HOME": "/usr/lib/spark/",
     "PYTHONPATH": "/usr/lib/spark/python/:${PY4J_ZIP}",
     "PYTHONSTARTUP": "/usr/lib/spark/python/pyspark/shell.py",
-    "PYSPARK_SUBMIT_ARGS": "--master yarn --jars gs://jokull/graphframes_2.11-0.6.0-SNAPSHOT-spark2.2.jar --deploy-mode client ${PACKAGES_ARG} pyspark-shell"
+    "PYSPARK_SUBMIT_ARGS": "--master yarn --jars gs://jokull/graphframes_2.11-0.6.0-SNAPSHOT-spark2.2.jar,gs://jokull/scala-logging-slf4j_2.11-2.1.2.jar,gs://jokull/scala-logging-api_2.11-2.1.2.jar --deploy-mode client ${PACKAGES_ARG} pyspark-shell"
  }
 }
 EOF
